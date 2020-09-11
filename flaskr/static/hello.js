@@ -3,6 +3,3 @@ window.addEventListener('mousemove', e=>{
     document.getElementById('x-coord').textContent=e.clientX;
     document.getElementById('y-coord').textContent=e.clientY;
 })
-
-
-
