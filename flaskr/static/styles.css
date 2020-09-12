@@ -1,6 +1,9 @@
 :root {
     --gridColor: rgb(184, 185, 189);
     --dotColor: rgb(172, 203, 235);
+    --timeLineX: 24vw;
+    --timeLineY:19vh;
+    --timeLineThick:0.6vw
 }
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -17,10 +20,22 @@ body {
 } 
 
 #timeLine {
-    border-left: 0.8vw solid green;
+    border-left: var(--timeLineThick) solid green;
     height: 400vw;
     position: absolute;
-    left: 24vw;
-    top: 19vh;
+    left: var(--timeLineX);
+    top: var(--timeLineY);
     margin: 0;
+}
+
+.block {
+    border-width: thick;
+    border-color: yellow;
+    background-color: rgba(250, 200, 135, 0.328);
+    left:24.6vw;
+    top:calc(var(--timeLineY)+var(--timeLineThick));
+
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
 }
