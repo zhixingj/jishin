@@ -3,24 +3,27 @@
     --dotColor: rgb(172, 203, 235);
 }
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     overflow-y: scroll;
-    width: 1000px;
-    height: 5000px;
+    height: 160vh;
     background-size: 1.5vw 1.5vw;
-    background-position: 0 0,0 0,0.77vw 0.77vw;
+    background-position: 0 0, 0 0, 0.77vw 0.77vw;
     background-color: rgb(235, 235, 235);
-    background-image: 
-        linear-gradient(to right, var(--gridColor) 0.05vw, transparent 0.05vw),
+    background-image: linear-gradient(to right, var(--gridColor) 0.05vw, transparent 0.05vw),
         linear-gradient(to bottom, var(--gridColor) 0.05vw, transparent 0.05vw),
         radial-gradient(circle, var(--dotColor) 0.1vw, transparent 0.1vw);
-} 
+}
 
 #timeLine {
-    border-left: 0.8vw solid green;
-    height: 400vw;
+    border-left: 7px solid black;
+    height: 120vh;
     position: absolute;
     left: 24vw;
     top: 19vh;
     margin: 0;
+}
+
+#mousetip-time {
+    display: none;
+    position: absolute;
 }
