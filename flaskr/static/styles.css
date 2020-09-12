@@ -1,9 +1,41 @@
+:root {
+    --gridColor: rgb(184, 185, 189);
+    --dotColor: rgb(172, 203, 235);
+    --timeLineX: 24vw;
+    --timeLineY:19vh;
+    --timeLineThick:0.6vw
+}
 body {
-    background-size: 30px 30px;
-    background-position: 0 0,0 0, 15.3px 15.3px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-y: scroll;
+    width: 1000px;
+    height: 5000px;
+    background-size: 1.5vw 1.5vw;
+    background-position: 0 0,0 0,0.77vw 0.77vw;
     background-color: rgb(235, 235, 235);
     background-image: 
-        repeating-linear-gradient(to right, rgb(199, 199, 199) 0px 0.5px, transparent 0.5px 30px),
-        repeating-linear-gradient(to bottom, rgb(185, 185, 185) 0px 0.5px, transparent 0.5px 30px),
-        radial-gradient(circle, #6e80d3 0px 1px, rgba(255, 255, 255, 0) 1px 60px);
+        linear-gradient(to right, var(--gridColor) 0.05vw, transparent 0.05vw),
+        linear-gradient(to bottom, var(--gridColor) 0.05vw, transparent 0.05vw),
+        radial-gradient(circle, var(--dotColor) 0.1vw, transparent 0.1vw);
 } 
+
+#timeLine {
+    border-left: var(--timeLineThick) solid green;
+    height: 400vw;
+    position: absolute;
+    left: var(--timeLineX);
+    top: var(--timeLineY);
+    margin: 0;
+}
+
+.block {
+    border-width: thick;
+    border-color: yellow;
+    background-color: rgba(250, 200, 135, 0.328);
+    left:24.6vw;
+    top:calc(var(--timeLineY)+var(--timeLineThick));
+
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
+}
