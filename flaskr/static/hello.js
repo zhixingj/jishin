@@ -1,3 +1,4 @@
+
 window.addEventListener('load', event=>{
     svg = d3.select('#svg');
     svg.on('mousedown', startDrawing);
@@ -6,17 +7,22 @@ window.addEventListener('load', event=>{
     svg.on('mouseup', stopDrawing);
     
 })
+=======
+window.onload = init;
+
 
 var block = null;
 var coord = {x:0, y:0}; //initial mouse coord
 var paint = false;
 var startCorner = {x:0,y:0};
+
 var rect = null;
 
 function getPosition(event) {
     coord.x = event.pageX+document.body.scrollLeft;
     coord.y = event.pageY+document.body.scrollTop;
 }
+
 function startDrawing(event) {
     console.log('started drawing');
     paint = true;
