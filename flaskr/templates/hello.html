@@ -1,7 +1,29 @@
 {%  extends 'layout.html' %}
+{% block head %}
+<script src ='../static/tasks.js'></script>
+{% endblock %}
+
+
 {% block body %}
-<h1>{{view}}, {{date}}</h1>
+<h1>{{view}}, {{date}}, {{weekday}}</h1>
+<div style="font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Hello, {{username}}</div>
+<div style="position:absolute; top: 25px; right: 50px;">{{weather}},{{feels_like}} degrees, {{humidity}}</div>
 <div id="timeLine"></div>
+<div>Tasks</div>
+<ol>
+    {% for task in tasks %}
+        <li>{{task[0]}}
+            <form action="{{url_for('delete_task', task_id=task[1], username=username)}}" method="POST" style="display:inline-block">
+                <button type="submit">delete</button>
+            </form>
+        </li>
+    {% endfor %}
+</ol>
+
+<form action="{{url_for('add_task', username=username)}}" method="POST" id="new_task_form">
+    <input type="text" name="task" placeholder="New Task" id="new_task">
+    <button id="add_task">Submit</button>
+</form>
 <svg id = 'svg' style="width: 3000; height:5000"></svg>
 
 {% endblock %}

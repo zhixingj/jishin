@@ -7,7 +7,6 @@ window.addEventListener('load', event=>{
     svg.on('mouseup', stopDrawing);
     
 })
-=======
 window.onload = init;
 
 
