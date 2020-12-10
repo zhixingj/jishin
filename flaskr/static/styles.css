@@ -1,5 +1,5 @@
 :root {
-    --gridColor: rgb(184, 185, 189);
+    --gridColor: rgb(208, 208, 208);
     --dotColor: rgb(172, 203, 235);
     --timeLineX: 24vw;
     --timeLineY:19vh;
@@ -11,7 +11,7 @@ body {
     height: 160vh;
     background-size: 1.5vw 1.5vw;
     background-position: 0 0, 0 0, 0.77vw 0.77vw;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
     background-image: linear-gradient(to right, var(--gridColor) 0.05vw, transparent 0.05vw),
         linear-gradient(to bottom, var(--gridColor) 0.05vw, transparent 0.05vw),
         radial-gradient(circle, var(--dotColor) 0.1vw, transparent 0.1vw);
